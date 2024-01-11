@@ -32,19 +32,19 @@
                         <td>Image</td>
                     </tr>
                     <xsl:for-each select="DSSanpham/Sanpham">
-                     <xsl:choose>
-                       		<xsl:when test="amount=100">
-                            <tr style="background:#eaf548">
-                                <td><xsl:value-of select="id"/></td>
-                                <td><xsl:value-of select="name"/></td>
-                                <td><xsl:value-of select="category_id"/></td>
-                                <td><xsl:value-of select="desscription"/></td>
-                                <td><xsl:value-of select="amount"/></td>
-                                <td><xsl:value-of select="price"/></td>
-                                <td><xsl:value-of select="size"/></td>
-                                <td><xsl:value-of select="image"/></td>
-                            </tr>
-                            </xsl:when>
+                     	<xsl:choose>
+                     		<xsl:when test="amount=100">
+	                            <tr style="background:#eaf548">
+	                                <td><xsl:value-of select="id"/></td>
+	                                <td><xsl:value-of select="name"/></td>
+	                                <td><xsl:value-of select="category_id"/></td>
+	                                <td><xsl:value-of select="desscription"/></td>
+	                                <td><xsl:value-of select="amount"/></td>
+	                                <td><xsl:value-of select="price"/></td>
+	                                <td><xsl:value-of select="size"/></td>
+	                                <td><xsl:value-of select="image"/></td>
+	                            </tr>
+	                	</xsl:when>
                        </xsl:choose>
                     </xsl:for-each>
                 </table>
