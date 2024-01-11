@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- <?xml-stylesheet href="yc1.xsl" type="text/xsl"?> -->
+<!-- <?xml-stylesheet href="yc2.xsl" type="text/xsl"?> -->
+<!-- <?xml-stylesheet href="yc3.xsl" type="text/xsl"?> -->
+<!-- <?xml-stylesheet href="yc4.xsl" type="text/xsl"?> -->
+<?xml-stylesheet href="yc5.xsl" type="text/xsl"?>
+
+
+<DSSanpham xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="btl.xsd">
+
+  <Sanpham>
+    <id>1</id>
+    <name>Áo sơ mi</name>
+    <category_id>1</category_id>
+    <desscription>Sơ mi cao cấp</desscription>
+    <amount>100</amount>
+    <price>1000000</price>
+    <size>M</size>
+    <image type="jpg" src="a.jpg"/>
+  </Sanpham>
+  
+  <Sanpham>
+  	<id>2</id>
+  	<name>Quần bò</name>
+  	<category_id>2</category_id>
+  	<desscription>Quần bò rách</desscription>
+  	<amount>200</amount>
+  	<price>200000</price>
+  	<size>L</size>
+  	<image type="png" src="Anh.png"/>
+  </Sanpham>
+  
+  <Sanpham>
+  	<id>3</id>
+  	<name>Quần âu</name>
+  	<category_id>3</category_id>
+  	<desscription>Quần Âu</desscription>
+  	<amount>9999</amount>
+  	<price>1000000</price>
+  	<size>XL</size>
+  	<image type="jpg" src="1.jpg"/>
+  </Sanpham>
+  
+    <Sanpham>
+  	<id>4</id>
+  	<name>Quần ngố</name>
+  	<category_id>4</category_id>
+  	<desscription>Ngố tàu</desscription>
+  	<amount>1</amount>
+  	<price>100000000</price>
+  	<size>XXL</size>
+  	<image type="jpg" src="Pro.jpg"/>
+  </Sanpham>
+  
+</DSSanpham>

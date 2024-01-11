@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?><xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+    <xs:element name="id" type="xs:positiveInteger"></xs:element>
+
+    <xs:element name="name">
+        <xs:simpleType>
+            <xs:restriction base="xs:string">
+                <xs:minLength value="3"></xs:minLength>
+                <xs:maxLength value="50"></xs:maxLength>
+            </xs:restriction>
+        </xs:simpleType>
+    </xs:element>
+
+    <xs:element name="category_id">
+        <xs:simpleType>
+            <xs:restriction base="xs:integer">
+                <xs:minInclusive value="1"></xs:minInclusive>
+                <xs:maxInclusive value="9"></xs:maxInclusive>
+            </xs:restriction>
+        </xs:simpleType>
+    </xs:element>
+    
+    
+     <xs:element name="desscription">
+        <xs:simpleType>
+            <xs:restriction base="xs:string">
+                <!-- <xs:pattern value="^[a-zA-Z0-9]*$"></xs:pattern> -->
+                <xs:maxLength value="128"></xs:maxLength>
+            </xs:restriction>
+        </xs:simpleType>
+    </xs:element>
+    
+     <xs:element name="amount">
+        <xs:simpleType>
+            <xs:restriction base="xs:integer">
+                <xs:minInclusive value="0"></xs:minInclusive>
+                <xs:maxInclusive value="9999"></xs:maxInclusive>
+            </xs:restriction>
+        </xs:simpleType>
+    </xs:element>
+    
+     <xs:element name="price">
+        <xs:simpleType>
+            <xs:restriction base="xs:integer">
+                <xs:minInclusive value="100"></xs:minInclusive>
+            </xs:restriction>
+        </xs:simpleType>
+    </xs:element>
+    
+     <xs:element name="size">
+     	<xs:simpleType>
+     		<xs:restriction base="xs:string">
+     			<xs:enumeration value="M"></xs:enumeration>
+     			<xs:enumeration value="L"></xs:enumeration>
+     			<xs:enumeration value="XL"></xs:enumeration>
+     			<xs:enumeration value="XXL"></xs:enumeration>
+     		</xs:restriction>
+     	</xs:simpleType>
+     </xs:element>
+    
+     <xs:element name="image">
+       <xs:complexType>
+       	<xs:attribute name="type" type="xs:string" use="required"></xs:attribute>
+       	<xs:attribute name="src" type="xs:string" use="optional"></xs:attribute>
+       </xs:complexType>
+    </xs:element>
+    
+
+    <xs:element name="Sanpham">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="id"></xs:element>
+                <xs:element ref="name"></xs:element>
+                <xs:element ref="category_id"></xs:element>
+                <xs:element ref="desscription"></xs:element>
+                <xs:element ref="amount"></xs:element>
+                <xs:element ref="price"></xs:element>
+                <xs:element ref="size"></xs:element>
+                <xs:element ref="image"></xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="DSSanpham">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="Sanpham" minOccurs="0" maxOccurs="unbounded"></xs:element>
+            </xs:sequence>
+        </xs:complexType>
+         <xs:unique name="uniqueId">
+            <xs:selector xpath="Sanpham/id"></xs:selector>
+            <xs:field xpath="."></xs:field>
+        </xs:unique>
+    </xs:element>
+
+</xs:schema>
