@@ -14,7 +14,7 @@
 					padding: 20px;
 					}
 					.title-heading{
-					background: lightblue;
+					background: #d5d5d5;
 					}
 				</style>
 			</head>
@@ -42,9 +42,21 @@
 	                                <td><xsl:value-of select="amount"/></td>
 	                                <td><xsl:value-of select="price"/></td>
 	                                <td><xsl:value-of select="size"/></td>
-	                                <td><xsl:value-of select="image"/></td>
+	                                <td><xsl:value-of select="image/@src"/></td>
 	                            </tr>
 	                	</xsl:when>
+	                	<xsl:otherwise>
+							<tr>
+	                            <td><xsl:value-of select="id"/></td>
+	                            <td><xsl:value-of select="name"/></td>
+	                            <td><xsl:value-of select="category_id"/></td>
+	                            <td><xsl:value-of select="desscription"/></td>
+	                            <td><xsl:value-of select="amount"/></td>
+	                            <td><xsl:value-of select="price"/></td>
+	                            <td><xsl:value-of select="size"/></td>
+	                            <td><xsl:value-of select="image/@src"/></td>
+	                        </tr>
+	                	</xsl:otherwise>
                        </xsl:choose>
                     </xsl:for-each>
                 </table>
