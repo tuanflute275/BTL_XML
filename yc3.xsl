@@ -14,7 +14,7 @@
 					padding: 20px;
 					}
 					.title-heading{
-					background: lightblue;
+					background: #d5d5d5;
 					}
 				</style>
 			</head>
@@ -34,7 +34,7 @@
                     <xsl:for-each select="DSSanpham/Sanpham">
                        <xsl:choose>
                        		<xsl:when test="name='Áo sơ mi'">
-                       			 <tr style="background:#ebebeb">
+                       	<tr>
                             <td><xsl:value-of select="id"/></td>
                             <td><xsl:value-of select="name"/></td>
                             <td><xsl:value-of select="category_id"/></td>
@@ -42,7 +42,7 @@
                             <td><xsl:value-of select="amount"/></td>
                             <td><xsl:value-of select="price"/></td>
                             <td><xsl:value-of select="size"/></td>
-                            <td><xsl:value-of select="image"/></td>
+                            <td><xsl:value-of select="image/@src"/></td>
                         </tr>
                        		</xsl:when>
                        </xsl:choose>
