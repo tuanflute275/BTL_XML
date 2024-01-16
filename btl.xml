@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- <?xml-stylesheet href="yc1.xsl" type="text/xsl"?> -->
+<?xml-stylesheet href="yc1.xsl" type="text/xsl"?>
 <!-- <?xml-stylesheet href="yc2.xsl" type="text/xsl"?> -->
 <!-- <?xml-stylesheet href="yc3.xsl" type="text/xsl"?> -->
 <!-- <?xml-stylesheet href="yc4.xsl" type="text/xsl"?> -->
-<?xml-stylesheet href="yc5.xsl" type="text/xsl"?>
+<!-- <?xml-stylesheet href="yc5.xsl" type="text/xsl"?> -->
 
 
 <DSSanpham xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="btl.xsd">
