@@ -33,7 +33,7 @@
                     </tr>
                     <xsl:for-each select="DSSanpham/Sanpham">
                        <xsl:choose>
-                       		<xsl:when test="name='Áo sơ mi'">
+                       		<xsl:when test="contains(name, 'Áo')">
                        	<tr>
                             <td><xsl:value-of select="id"/></td>
                             <td><xsl:value-of select="name"/></td>
